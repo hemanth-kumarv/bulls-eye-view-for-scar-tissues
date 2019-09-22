@@ -2,7 +2,7 @@
 A python program to detect the scar tissues in the Left Ventricle of the human heart and display the same in a Bull's eye view.
 
 ****
-##Requirements
+Requirements
 ==================
 * Tested on Windows 10 using Python 3.6.8
 * OpenCV 4.1.0
@@ -11,8 +11,7 @@ A python program to detect the scar tissues in the Left Ventricle of the human h
 * numpy 1.17.0
 
 ****
-
-##Procedure
+Procedure
 ===============
 The Bull's Eye view looks like this
 
@@ -28,7 +27,7 @@ The mask looks like this
 
 ![mask](Images/mask_lge_4.png)
 
-The Output we got 
+The ###Output we got 
 
 The stacked up image 
 
@@ -39,8 +38,7 @@ The Bull's Eye view
 ![bull's eye view](Images/Bulls_Eye.png)
 
 ****
-
-##Usage
+Usage
 ==========
 The program can be executed in command prompt like this 
 ```
