@@ -34,7 +34,6 @@ The stacked up image
 ![stacked image](Images/Stacked_Output.png)
 
 The Bull's Eye view 
-
 ![bull's eye view](Images/Bulls_Eye.png)
 
 ****
