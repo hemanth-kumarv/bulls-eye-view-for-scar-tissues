@@ -44,3 +44,9 @@ The program can be executed in command prompt like this
 ```
 python main.py [directory where the MR images and mask is present]
 ```
+
+The inputs in the above specified directory should have the file names as:
+```
+lge_[0-8].png --> LGE MR image
+mask_lge_[0-8] --> LGE MR mask
+```
