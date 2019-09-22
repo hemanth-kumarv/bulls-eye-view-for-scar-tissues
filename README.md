@@ -27,7 +27,7 @@ The mask looks like this
 
 ![mask](Images/mask_lge_4.png)
 
-The ###Output we got 
+The **Output** we got 
 
 The stacked up image 
 
