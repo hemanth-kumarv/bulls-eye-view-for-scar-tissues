@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 import imutils
+import sys
 import trim
 import get4
 import get6
@@ -11,10 +12,12 @@ import stack
 images = []
 imgnotrim = []
 
+dirName = str(sys.argv[1])
+
 for i in range(8, -1, -1):
-    img1 = cv2.imread('lge_'+str(i)+'.png')
+    img1 = cv2.imread(dirName+'/lge_'+str(i)+'.png')
     img = cv2.cvtColor(img1,cv2.COLOR_BGR2GRAY)
-    img2 = cv2.imread('mask_lge_'+str(i)+'.png')
+    img2 = cv2.imread(dirName+'/mask_lge_'+str(i)+'.png')
     img = cv2.cvtColor(img2,cv2.COLOR_BGR2GRAY)
 
     intersect = cv2.bitwise_and(img1, img2)
@@ -53,10 +56,10 @@ for i in range(17):
     level = averages[i]*6/256
     print(str(i+1)+". Pixel value: "+str(int(averages[i]))+" and Level: "+str(level))
 stack = stack.stackup(imgnotrim)
-cv2.namedWindow('Output', cv2.WINDOW_NORMAL)
-cv2.namedWindow('Output1', cv2.WINDOW_NORMAL)
-cv2.imshow('Output', output)
-cv2.imshow('Output1',stack)
+cv2.namedWindow('Bulls Eye', cv2.WINDOW_NORMAL)
+cv2.namedWindow('Stacked Output', cv2.WINDOW_NORMAL)
+cv2.imshow('Bulls Eye', output)
+cv2.imshow('Stacked Output',stack)
 cv2.waitKey(0)
-cv2.imwrite('Output.png', output)
-cv2.imwrite('Output1.png', stack)
+cv2.imwrite('Bulls_Eye.png', output)
+cv2.imwrite('Stacked_Output.png', stack)
